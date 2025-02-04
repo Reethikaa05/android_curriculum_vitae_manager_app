@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navDrawerIconTint"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:onClick="onBackClick"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Title: Edit Profile -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textColor="@android:color/white"
+            android:textSize="27sp" />
+    </LinearLayout>
+
+    <!-- Profile Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="97dp"
+            android:layout_height="92dp"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rajesh"
+            app:shapeAppearanceOverlay="@style/CircleImageViewStyle" />
+
+        <!-- Profile Name -->
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dr. R.S.Rajesh"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <!-- Designation -->
+        <TextView
+            android:id="@+id/designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Professor"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!-- Department -->
+        <TextView
+            android:id="@+id/dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Department of Computer Science and Engineering"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!-- Email and Phone Icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/email_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Email"
+                android:onClick="onEmailClick"
+                android:src="@drawable/email"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/phone_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="Phone"
+                android:onClick="onPhoneClick"
+                android:src="@drawable/phone"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Profile Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Profile Icon -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Profile"
+                    android:src="@drawable/ic_profilee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Profile"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/profile_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/profile_edit"
+                android:minHeight="48dp"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+            <!-- Publication Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Publication Icon -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Publication"
+                    android:src="@drawable/ic_pub" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Publication"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/publication_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/publication_edit"
+                android:minHeight="48dp"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+            <!-- Professional Activity Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Professional Icon -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Professional Activity"
+                    android:src="@drawable/ic_professional" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Professional Activity"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/professional_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/professional_edit"
+                android:minHeight="48dp"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+            <!-- Projects & Consultancy Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Projects Icon -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Projects &amp; Consultancy"
+                    android:src="@drawable/ic_project" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Projects &amp; Consultancy"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/projects_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/projects_edit"
+                android:minHeight="48dp"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+            <!-- Recognition Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Recognition Icon -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Recognition"
+                    android:src="@drawable/ic_reco" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Recognition"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/recognition_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/recognition_edit"
+                android:minHeight="48dp"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+            <!-- Guidance Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- Icon for Guidance -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Guidance"
+                    android:src="@drawable/ic_guidance"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Guidance Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guidance"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Guidance Dropdown -->
+            <Spinner
+                android:id="@+id/guidance_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="8dp"
+                android:entries="@array/guidance_edit"
+                android:popupBackground="@android:color/white"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/lightb">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_back"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Title: Edit Education Details -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Edit Education Details"
+        android:textSize="24sp"
+        android:textColor="@color/activity_background"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    <!-- Degree Name EditText -->
+    <EditText
+        android:id="@+id/degree_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_button"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Degree Name"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <!-- Specialisation EditText -->
+    <EditText
+        android:id="@+id/specialisation_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/degree_name_edittext"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Specialisation"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <!-- College Name EditText -->
+    <EditText
+        android:id="@+id/college_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/specialisation_edittext"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="College Name"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <!-- Month & Year of Passing EditText -->
+    <EditText
+        android:id="@+id/month_year_of_passing_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/college_name_edittext"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Month &amp; Year of Passing"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <!-- Degree Type Spinner -->
+    <Spinner
+        android:id="@+id/degree_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_year_of_passing_edittext"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/degree_types"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/degree_type_spinner"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:backgroundTint="@color/success"
+        app:icon="@drawable/ic_check"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
+
+    <!-- View Details Button -->
+    <Button
+        android:id="@+id/view_details_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/save_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:padding="12dp"
+        android:text="View Details"
+        app:icon="@drawable/ic_visibility"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        tools:ignore="TextContrastCheck" />
+</RelativeLayout>

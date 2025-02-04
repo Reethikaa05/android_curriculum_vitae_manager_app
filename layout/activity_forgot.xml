@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/homepage"
+    tools:context=".ForgotPasswordActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/forgot_password_icon"
+        android:layout_width="138dp"
+        android:layout_height="136dp"
+        android:layout_centerHorizontal="true"
+        app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/images" />
+
+
+    <EditText
+        android:id="@+id/forgot_password_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_password_icon"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:padding="16dp" />
+
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_password_email"
+        android:layout_marginTop="39dp"
+        android:text="Submit"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white" />
+
+
+    <TextView
+        android:id="@+id/signin_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Remembered? Sign In"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"/>
+</RelativeLayout>

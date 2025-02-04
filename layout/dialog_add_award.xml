@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_award_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Award Title:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/dialog_award_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter award title"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dialog_awarding_agency_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sponsoring Agency:"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/dialog_awarding_agency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Sponsoring agency"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dialog_award_month_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month:"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/dialog_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Month"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dialog_award_year_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year:"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/dialog_award_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter year"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dialog_award_purpose_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purpose:"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/dialog_award_purpose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter purpose"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/dialog_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/dialog_status_spinner"
+        android:spinnerMode="dropdown"
+        android:entries="@array/award_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp" />
+
+</LinearLayout>

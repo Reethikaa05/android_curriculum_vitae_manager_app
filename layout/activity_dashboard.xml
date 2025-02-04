@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:background="@drawable/rounded_border"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="82dp"
+            android:layout_height="83dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rajesh"
+            app:shapeAppearanceOverlay="@style/CircleImageViewStyle" />
+
+        <TextView
+            android:id="@+id/dashboard_title"
+            android:layout_width="192dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="112dp"
+            android:layout_toStartOf="@id/profile_image"
+            android:text="My Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="138dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/dashboard_title"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="21dp"
+            android:layout_toStartOf="@id/profile_image"
+            android:text="Welcome Rajesh"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Grid Section -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp">
+
+        <!-- Home Button -->
+        <FrameLayout
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="73dp"
+                    android:src="@drawable/homed" />
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Modify General Information"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- View Profile Button -->
+        <FrameLayout
+            android:id="@+id/btnViewProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:background="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="77dp"
+                    android:src="@drawable/view" />
+
+                <TextView
+                    android:layout_width="124dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="View Profile"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Reminder Button -->
+        <FrameLayout
+            android:id="@+id/btnReminder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="89dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/ic_reminder" />
+
+                <TextView
+                    android:layout_width="124dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Reminder"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Export PDF Button -->
+        <FrameLayout
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="74dp"
+                    android:layout_height="69dp"
+                    android:src="@drawable/ic_editb" />
+
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Edit Profile"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Share Button -->
+        <FrameLayout
+            android:id="@+id/btnCv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="87dp"
+                    android:layout_height="78dp"
+                    android:src="@drawable/ic_cv" />
+
+                <TextView
+                    android:layout_width="87dp"
+                    android:layout_height="61dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="View Full CV"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Logout Button -->
+        <FrameLayout
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/logout" />
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </GridLayout>
+</LinearLayout>

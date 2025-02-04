@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:background="@drawable/purpleb"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:background="@drawable/gpurple"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="138dp"
+                android:layout_height="98dp"
+                android:layout_alignParentStart="true"
+                android:contentDescription="Logo"
+                android:src="@drawable/msu_logo" />
+
+            <TextView
+                android:id="@+id/dashboard_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/faculty_cv_maker"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dept_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                android:text="Department of CSE"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Grid Section -->
+        <TextView
+            android:id="@+id/grid_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:text="Faculty List"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <!-- Faculty Members -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <!-- Faculty Member 1 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/rajesh"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/dr_r_s_rajesh"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professor and Head"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 10 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/balasuba"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/dr_r_balasubramanian"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 3 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/suru"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.A.Suruliandi"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 4-->
+            <LinearLayout
+                android:id="@+id/faculty_member_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/murug"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.D.Murugan"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 5 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/balamur"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.V.Balamurugan"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 6-->
+            <LinearLayout
+                android:id="@+id/faculty_member_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/jansi"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.P.Arockia Jansi Rani"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 7 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/murugeswari"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.G.Murugeswari"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 8 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/muthu"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.G.Muthulakshmi"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 9 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/subha"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.V.Subha"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 2 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/sundar"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.P.Sundareswaran"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 11 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/aravind"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.K.Aravind Kumar"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Faculty Member 12 -->
+            <LinearLayout
+                android:id="@+id/faculty_member_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!-- Faculty Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="114dp"
+                    android:layout_height="111dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onFacultyClick"
+                    android:src="@drawable/antelin"
+                    app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                <!-- Faculty Name and Designation -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr.S.Antelin Vijila"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Associate Professor"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Additional faculty members follow the same pattern -->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

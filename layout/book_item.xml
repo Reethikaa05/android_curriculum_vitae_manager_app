@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/book_publisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_month_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month &amp; Year:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_edition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edition:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_isbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ISBN Number:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_pageno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page Number:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_authors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Authors:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_author1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author 1:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_author2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author 2:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/book_author3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author 3:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</LinearLayout>

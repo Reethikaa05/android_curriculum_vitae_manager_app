@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Scholar Details"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/dialog_scholar_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of Scholar"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/dialog_registration_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="Registration Number"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/dialog_registration_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Registration"
+        android:textColor="@color/black"
+        android:inputType="date"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/dialog_submission_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Submission"
+        android:textColor="@color/black"
+        android:inputType="date"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/dialog_viva_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Viva"
+        android:textColor="@color/black"
+        android:inputType="date"
+        android:minHeight="48dp" />
+
+    <Spinner
+        android:id="@+id/dialog_degree_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/dialog_mode_of_degree_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/dialog_status_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown" />
+
+</LinearLayout>

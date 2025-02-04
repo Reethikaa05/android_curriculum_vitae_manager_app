@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/card_background">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Back"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General Information"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:textColor="@android:color/black"/>
+
+    <!-- Profile Image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width="155dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_faculty"
+        app:shapeAppearanceOverlay="@style/CircleImageViewStyle" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/name_text"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Dr. R.S.Rajesh"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingTop="9dp" />
+
+    <!-- Designation -->
+    <TextView
+        android:id="@+id/designation_text"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Professor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="9dp" />
+
+    <!-- Email Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Email:"
+        android:textStyle="bold"
+        android:paddingTop="9dp"/>
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter new email"
+        android:minHeight="48dp" />
+
+    <!-- Phone Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Phone:"
+        android:textStyle="bold"
+        android:paddingTop="9dp"/>
+
+    <EditText
+        android:id="@+id/phone_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter new phone number"
+        android:minHeight="48dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_button"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/success"
+        app:icon="@drawable/ic_checkb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center"
+        android:paddingTop="16dp" />
+</LinearLayout>

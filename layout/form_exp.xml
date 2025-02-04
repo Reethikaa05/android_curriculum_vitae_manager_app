@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <!-- Back Button -->
+
+    <!-- Title -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Experience"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Experience Type Spinner -->
+    <Spinner
+        android:id="@+id/spinner_experience_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:entries="@array/experience_types"
+        android:minHeight="48dp" />
+
+    <!-- Job Title Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/form_exp_til_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_exp_et_job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Job Title" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Years of Experience Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/form_exp_til_years_of_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_exp_et_years_of_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Years of Experience" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Description Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/form_exp_til_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_exp_et_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:lines="4" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Save and View Details buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/form_exp_btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/success"
+            android:text="Save"
+            app:icon="@drawable/ic_check"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/form_exp_btn_view_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="View Details"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_visibility"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+</LinearLayout>
