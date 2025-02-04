@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.cv">
+    <!-- Permissions -->
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_notify" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorAccent" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/clogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <activity
+            android:name=".ResearchDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/home_activity_label">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OtherActivity"
+            tools:ignore="Instantiatable" /> <!-- MainActivity - The main entry point of the app -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="ExtraText" /> <!-- Other Activities -->
+        <activity android:name=".DashboardActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity
+            android:name=".ViewProfileActivity"
+            android:label="View Profile"
+            android:theme="@style/YourCustomTheme" />
+        <activity
+            android:name=".PublicationActivity"
+            android:label="Publication"
+            android:theme="@style/YourCustomTheme" />
+        <activity
+            android:name=".ProjectActivity"
+            android:label="Projects"
+            android:theme="@style/YourCustomTheme" />
+        <activity
+            android:name=".ProfessionalActivity"
+            android:label="Professional"
+            android:theme="@style/YourCustomTheme" />
+        <activity
+            android:name=".RecognitionActivity"
+            android:label="Recognition"
+            android:theme="@style/YourCustomTheme" />
+        <activity
+            android:name=".GuidanceActivity"
+            android:label="Guidance"
+            android:theme="@style/YourCustomTheme" />
+        <activity android:name=".PersonalInformationActivity" />
+        <activity android:name=".DisplayPersonalInformationActivity" />
+        <activity android:name=".EducationActivity" />
+        <activity android:name=".ViewEducationActivity" />
+        <activity
+            android:name=".ExperienceActivity">
+        </activity>
+
+        <activity android:name=".ExperienceDetailsActivity" />
+        <activity android:name=".ReminderActivity" />
+        <activity android:name=".ResearchInterestActivity" />
+        <activity android:name=".MembershipActivity" />
+        <activity android:name=".MembershipDetailsActivity" />
+        <activity android:name=".CitationActivity" />
+        <activity android:name=".ViewCitationActivity"/>
+        <activity android:name=".BookActivity" />
+        <activity android:name=".ViewBookActivity"/>
+        <activity android:name=".BookDetailsActivity"/>
+        <activity android:name=".BookChapterActivity"/>
+        <activity android:name=".ViewBookChaptersActivity"></activity>
+        <activity android:name=".JournalActivity"/>
+        <activity android:name=".ViewJournalsActivity"/>
+        <activity android:name=".ConsultancyActivity"/>
+        <activity android:name=".ViewConsultancyActivity"/>
+        <activity android:name=".AwardsActivity"/>
+        <activity android:name=".ViewAwardActivity"/>
+n
+        <activity android:name=".PatentActivity"/>
+        <activity android:name=".ViewPatentsActivity"/>
+        <activity android:name=".InvitedLecturesActivity"/>
+        <activity android:name=".ViewInvitedLecturesActivity"/>
+        <activity android:name=".ProgramsAttendedActivity"/>
+        <activity android:name=".ViewProgramActivity"/>
+        <activity android:name=".ConferenceActivity"/>
+        <activity android:name=".ViewConferenceActivity"/>
+        <activity android:name=".PhdActivity"/>
+        <activity android:name=".ViewPhDActivity"/>
+        <activity android:name=".TemplateSelectionActivity"/>
+        <activity android:name=".ViewCVActivity"/>
+
+        <!-- Broadcast Receiver -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver" />
+
+        <service android:name=".ReminderService" />
+    </application>
+
+</manifest>
